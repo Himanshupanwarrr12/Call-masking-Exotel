@@ -24,6 +24,10 @@ const cleanNumber = (num = "") => {
         cleaned = cleaned.slice(1);
     }
 
+    if (cleaned.startsWith("0")) {
+        cleaned = cleaned.slice(1);
+    }
+
     return cleaned; // always 10 digits
 };
 
