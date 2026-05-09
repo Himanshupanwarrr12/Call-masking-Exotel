@@ -24,11 +24,7 @@ const cleanNumber = (num = "") => {
         cleaned = cleaned.slice(1);
     }
 
-    if (cleaned.startsWith("0")) {
-        cleaned = cleaned.slice(1);
-    }
-
-    return cleaned; // always 10 digits
+    return cleaned;
 };
 
 app.all("/exotel/connect", (req, res) => {
@@ -45,6 +41,7 @@ app.all("/exotel/connect", (req, res) => {
     console.log("From Number    :", fromNumber);
     console.log("Stored Rider   :", storedRider);
     console.log("Stored Customer:", storedCustomer);
+    console.log("LENGTHS:", fromNumber.length, storedRider.length, storedCustomer.length);
 
     let connectTo = "";
 
